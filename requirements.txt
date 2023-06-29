@@ -1,0 +1,15 @@
+black==23.3.0
+Django==4.2.2
+django-autoslug==1.9.9
+django-countries==7.5.1
+django-environ==0.10.0
+django-filter==23.2
+django-phonenumber-field==7.1.0
+djangorestframework==3.14.0
+flake8==6.0.0
+isort==5.12.0
+phonenumbers==8.13.15
+Pillow==9.5.0
+psycopg2-binary==2.9.6
+pyflakes==3.0.1
+
