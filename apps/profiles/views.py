@@ -8,11 +8,23 @@ from.renderes import ProfileJSONRenderer
 from.serializers import ProfileSerializer, UpdateProfileSerializer
 
 
+
 class AgentListAPIView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
     queryset = Profile.objects.filter(is_agent=True)
     serializer_class = ProfileSerializer
 
+"""
+    from rest_framework.decorators import api_view ,permissions
+
+    @api_view("GET")
+    @permission_classes(permission.IsAuthenticated)
+    def get_user(request): 
+        agent_profile= Profile.objects.filter(is_agent=True)
+        serializer = Profileserializer(agent_profile, many=True)
+        output = {"agent":serializer.data}
+        return Response(output, status=status_HTTP_200_OK)
+"""
 
 class TopAgentListAPIView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
